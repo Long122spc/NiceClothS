@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NiceCloth - Fashion Destination</title>
+    <link rel="stylesheet" href="nHomePage1.css" />
+  </head>
+  <body>
+    <div>
+      <header class="site-header">
+        <nav class="main-nav">
+          <h1 class="brand-title">NiceCloth</h1>
+          <div class="nav-links">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/about" class="nav-link">About Us</a>
+            <a href="/contact" class="nav-link">Contact</a>
+          </div>
+          <div class="nav-actions">
+            <button
+              class="cart-button"
+              aria-label="Shopping Cart"
+              data-el="button-1"
+            >
+              <span>Cart</span>
+              <span class="cart-count">
+                <template data-el="div-1"><!-- state.cartItems --></template>
+              </span>
+            </button>
+            <a href="/profile" class="profile-link">Profile</a>
+          </div>
+        </nav>
+      </header>
+      <section class="hero-section">
+        <img
+          src="./PicNiceCloth/Pic2.jpeg"
+          class="hero-image"
+          alt="Hero banner showcasing latest fashion"
+        />
+        <div class="hero-content">
+          <h2 class="hero-title">Welcome to NiceCloth</h2>
+          <p class="hero-description">Discover the latest fashion trends</p>
+          <button
+           class="shop-now-button"
+           onclick="window.location.href='./nLogin.html'"
+           >Shop Now</button>
+  
+        </div>
+      </section>
+      <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3 class="footer-title">NiceCloth</h3>
+            <p class="footer-description">
+              Your fashion destination for the latest trends and styles.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul class="footer-menu">
+              <li class="footer-item">
+                <a href="/" class="footer-link">Home</a>
+              </li>
+              <li class="footer-item">
+                <a href="/about" class="footer-link">About Us</a>
+              </li>
+              <li class="footer-item">
+                <a href="/contact" class="footer-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3 class="footer-title">Contact Us</h3>
+            <p class="contact-info">Email: info@nicecloth.com</p>
+            <p class="contact-info">Phone: 1231234567</p>
+          </div>
+          <div class="footer-social">
+            <h3 class="footer-title">Follow Us</h3>
+            <div class="social-links">
+              <a href="#" class="social-link">Facebook</a>
+              <a href="#" class="social-link">Instagram</a>
+              <a href="#" class="social-link">Twitter</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="nProfile.css" />
+  </head>
+  <body>
+    <div class="div">
+      <h1 class="h1">Profile</h1>
+      <nav class="nav">
+        <div class="div-2">NiceCloth</div>
+        <div class="div-3">
+          <a class="a" href="./nHomeP2.html"
+            >Home</a
+          >
+          <a class="a" href="/about">
+            About Us
+          </a>
+          <a class=" a" href="./nContact.html">
+            Contact
+          </a>
+          <a
+            class=" a-2"
+            onclick="window.location.href='./nLogin.html'"
+          >
+            Logout
+          </a>
+        </div>
+      </nav>
+      <h1 class="h1-2">Profile</h1>
+      <div stackColumnsAt="tablet" data-el="div-1">
+        <div class="div-4">
+          <div data-name="column" class="column">
+            <div class=" div-5">
+              <img src="./PicNiceCloth/meo3.jpg" class="img" alt="Profile picture" />
+              <h2 class="h2">
+                <template data-el="div-2">
+                  <!-- state.name || "Your Name" -->
+                </template>
+              </h2>
+            </div>
+          </div>
+          <div data-name="column" class="column-2">
+            <div class=" div-6">
+              <div class="div-7">
+                <div>
+                  <label class="label" for="fullName">Full Name</label>
+                  <input
+                    class="input"
+                    type="text"
+                    id="fullName"
+                    data-el="input-1"
+                    data-dom-state="input-2"
+                  />
+                </div>
+                <div>
+                  <label class="label-2" for="phoneNumber">Phone Number</label>
+                  <input
+                    class="input-2"
+                    type="tel"
+                    id="phoneNumber"
+                    data-el="input-3"
+                    data-dom-state="input-4"
+                  />
+                </div>
+                <div>
+                  <label class="label-3" for="address">Address</label>
+                  <input
+                    class="input-3"
+                    type="text"
+                    id="address"
+                    data-el="input-5"
+                    data-dom-state="input-6"
+                  />
+                </div>
+                <div>
+                  <label class="label-4" for="email">Email</label>
+                  <input
+                    class=" input-4"
+                    type="email"
+                    id="email"
+                    data-el="input-7"
+                    data-dom-state="input-8"
+                  />
+                </div>
+                <div class="div-8">
+                  <button
+                    class=" button"
+                    data-el="button-1"
+                  >
+                    Clear Information
+                  </button>
+                  <button
+                    class="button-2"
+                    data-el="button-2"
+                  >
+                    Update Information
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="nProfile.js"></script>
+  </body>
+</html>

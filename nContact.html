@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact NiceCloth</title>
+    <link rel="stylesheet" href="nContact.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-container">
+        <div class="header-left">
+          <h1 class="site-title">NiceCloth</h1>
+          <nav class="main-nav" aria-label="Main navigation">
+            <a class="nav-link" href="./nHomeP2.html">Home</a>
+            <a href="/contact" class="nav-link nav-link-active">Contact</a>
+          </nav>
+        </div>
+        <div class="header-right">
+          <a class="profile-link" href="./nProfile.html">Profile</a>
+          <button class="logout-btn" aria-label="Logout">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="hero-section">
+        <h1 class="page-title">Contact NiceCloth</h1>
+        <p class="hero-text">
+          Have questions about our products or services? We're here to help you
+          find the perfect style.
+        </p>
+      </section>
+
+      <div class="contact-container">
+        <div class="contact-grid">
+          <section class="form-section">
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-group">
+                <label class="form-label">
+                  <span>Name:</span>
+                  <input
+                    type="text"
+                    class="form-input"
+                    required
+                    aria-required="true"
+                  />
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  <span>Email:</span>
+                  <input
+                    type="email"
+                    class="form-input"
+                    required
+                    aria-required="true"
+                  />
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  <span>Subject:</span>
+                  <input
+                    type="text"
+                    class="form-input"
+                    required
+                    aria-required="true"
+                  />
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  <span>Message:</span>
+                  <textarea
+                    class="form-textarea"
+                    required
+                    aria-required="true"
+                  ></textarea>
+                </label>
+              </div>
+              <button class="submit-btn" type="submit">Send Message</button>
+            </form>
+          </section>
+
+          <section class="info-section">
+            <div class="contact-info">
+              <h2 class="info-title">Contact Information</h2>
+
+              <div class="info-group">
+                <h3 class="info-subtitle">Address</h3>
+                <address class="info-text">
+                  NiceCloth Flagship Store<br />
+                  789 Fashion Avenue<br />
+                  New York, NY 10001
+                </address>
+              </div>
+
+              <div class="info-group">
+                <h3 class="info-subtitle">Phone</h3>
+                <p class="info-text">+1 (555) 123-4567</p>
+              </div>
+
+              <div class="info-group">
+                <h3 class="info-subtitle">Email</h3>
+                <p class="info-text">
+                  support@nicecloth.com<br />
+                  sales@nicecloth.com
+                </p>
+              </div>
+
+              <div class="info-group">
+                <h3 class="info-subtitle">Business Hours</h3>
+                <p class="info-text">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p class="info-text">Saturday: 10:00 AM - 4:00 PM</p>
+                <p class="info-text">Sunday: Closed</p>
+              </div>
+            </div>
+
+            <img
+              src="./PicNiceCloth/meo3.jpg"
+              alt="NiceCloth Flagship Store"
+              class="store-image"
+            />
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="nContact.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - NiceCloth</title>
+    <link rel="stylesheet" href="nCart.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="brand-logo">NiceCloth</h1>
+        <div class="nav-links">
+            <a class="nav-link" href="./nHomeP2.html">Home</a>
+            <a class="nav-link" href="./nProfile.html">Profile</a>
+            <a class="nav-link" href="./nContact.html">Contact</a>
+            <button class="logout-button" 
+            onclick="window.location.href='./nLogin.html'"
+            aria-label="Logout">Logout</button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <h2 class="page-title">Shopping Cart</h2>
+        <div class="cart-container">
+            <div class="cart-layout">
+                <section class="products-section">
+                    <div class="product-list">
+                        <article class="product-card">
+                            <img
+                                src="./PicNiceCloth/meo3.jpg"
+                                alt="Classic T-Shirt"
+                                class="product-image"
+                            />
+                            <div class="product-details">
+                                <h3 class="product-name">Classic T-Shirt</h3>
+                                <p class="product-price">
+                                    <span>$</span>
+                                    <span>29.99</span>
+                                </p>
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn" aria-label="Decrease quantity">-</button>
+                                    <span class="quantity-display">1</span>
+                                    <button class="quantity-btn" aria-label="Increase quantity">+</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <img
+                                src="./PicNiceCloth/meo3.jpg"
+                                alt="Denim Jeans"
+                                class="product-image"
+                            />
+                            <div class="product-details">
+                                <h3 class="product-name">Denim Jeans</h3>
+                                <p class="product-price">
+                                    <span>$</span>
+                                    <span>59.99</span>
+                                </p>
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn" aria-label="Decrease quantity">-</button>
+                                    <span class="quantity-display">1</span>
+                                    <button class="quantity-btn" aria-label="Increase quantity">+</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="cart-summary">
+                    <h3 class="summary-title">Cart Summary</h3>
+                    <div class="total-amount">
+                        <span>Total:</span>
+                        <span>
+                            <span>$</span>
+                            <span>89.98</span>
+                        </span>
+                    </div>
+                    <button class="checkout-button">Checkout</button>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account - NiceCloth</title>
+    <link rel="stylesheet" href="nRegister.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-container">
+        <h1 class="brand-title">NiceCloth</h1>
+        <nav class="main-nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="./nHomePage1.html">Home</a></li>
+            <li><a class="nav-link" href="/about">About Us</a></li>
+            <li><a class="nav-link" href="/nContact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="registration-container">
+        <h1 class="page-title">Create Your NiceCloth Account</h1>
+        <form id="registrationForm" class="registration-form" novalidate>
+          <div class="form-group">
+            <label for="username" class="form-label">Username</label>
+            <input
+              id="username"
+              class="form-input"
+              type="text"
+              aria-required="true"
+              aria-describedby="username-error"
+            />
+            <span id="username-error" class="error-message" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input
+              id="email"
+              class="form-input"
+              type="email"
+              aria-required="true"
+              aria-describedby="email-error"
+            />
+            <span id="email-error" class="error-message" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input
+              id="password"
+              class="form-input"
+              type="password"
+              aria-required="true"
+              aria-describedby="password-error"
+            />
+            <span id="password-error" class="error-message" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword" class="form-label"
+              >Confirm Password</label
+            >
+            <input
+              id="confirmPassword"
+              class="form-input"
+              type="password"
+              aria-required="true"
+              aria-describedby="confirm-password-error"
+            />
+            <span
+              id="confirm-password-error"
+              class="error-message"
+              role="alert"
+            ></span>
+          </div>
+
+          <button type="submit"
+          class="submit-button"
+          onclick="window.location.href='./nHomeP2.html'"
+          >Create Account</button>
+        </form>
+
+        <div class="login-link-container">
+          <a href="nLogin.html" class="login-link"
+            >Already have an account? Login here</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p class="copyright-text">
+        © <span id="currentYear"></span> NiceCloth. All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const state = {
+          formData: {
+            username: "",
+            email: "",
+            password: "",
+            confirmPassword: "",
+          },
+          errors: {
+            username: "",
+            email: "",
+            password: "",
+            confirmPassword: "",
+          },
+        };
+
+        document.getElementById("currentYear").textContent =
+          new Date().getFullYear();
+
+        function isValidEmail(email) {
+          const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          return emailRegex.test(email);
+        }
+
+        function validatePassword(password) {
+          const requirements = {
+            uppercase: /[A-Z]/,
+            lowercase: /[a-z]/,
+            number: /[0-9]/,
+            special: /[!@#$%^&*(),.?":{}|<>]/,
+            length: 8,
+          };
+
+          if (password.length < requirements.length) {
+            return "Password must be at least 8 characters long";
+          }
+          if (!requirements.uppercase.test(password)) {
+            return "Password must contain at least one uppercase letter";
+          }
+          if (!requirements.lowercase.test(password)) {
+            return "Password must contain at least one lowercase letter";
+          }
+          if (!requirements.number.test(password)) {
+            return "Password must contain at least one number";
+          }
+          if (!requirements.special.test(password)) {
+            return "Password must contain at least one special character";
+          }
+          return "";
+        }
+
+        function validateField(fieldName) {
+          const value = state.formData[fieldName];
+          let error = "";
+
+          switch (fieldName) {
+            case "username":
+              if (!value.trim()) {
+                error = "Username is required";
+              } else if (value.length < 3) {
+                error = "Username must be at least 3 characters long";
+              }
+              break;
+
+            case "email":
+              if (!value.trim()) {
+                error = "Email is required";
+              } else if (!isValidEmail(value)) {
+                error = "Please enter a valid email address";
+              }
+              break;
+
+            case "password":
+              if (!value) {
+                error = "Password is required";
+              } else {
+                error = validatePassword(value);
+              }
+              break;
+
+            case "confirmPassword":
+              if (!value) {
+                error = "Please confirm your password";
+              } else if (value !== state.formData.password) {
+                error = "Passwords do not match";
+              }
+              break;
+          }
+
+          state.errors[fieldName] = error;
+          updateErrorDisplay(fieldName, error);
+          return !error;
+        }
+
+        function updateErrorDisplay(fieldName, error) {
+          const errorElement = document.getElementById(`${fieldName}-error`);
+          const input = document.getElementById(fieldName);
+
+          if (errorElement && input) {
+            errorElement.textContent = error;
+            if (error) {
+              input.setAttribute("aria-invalid", "true");
+              input.classList.add("error");
+            } else {
+              input.removeAttribute("aria-invalid");
+              input.classList.remove("error");
+            }
+          }
+        }
+
+        function validateForm() {
+          let isValid = true;
+          Object.keys(state.formData).forEach((field) => {
+            if (!validateField(field)) {
+              isValid = false;
+            }
+          });
+          return isValid;
+        }
+
+        const form = document.getElementById("registrationForm");
+        const inputs = form.querySelectorAll("input");
+
+        inputs.forEach((input) => {
+          input.addEventListener("input", (e) => {
+            state.formData[e.target.id] = e.target.value;
+            validateField(e.target.id);
+          });
+
+          input.addEventListener("blur", (e) => {
+            validateField(e.target.id);
+          });
+        });
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          if (validateForm()) {
+            console.log("Form submitted:", state.formData);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

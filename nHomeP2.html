@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="NiceCloth - Your Fashion Destination" />
+    <meta name="keywords" content="fashion, clothing, style, shop" />
+    <title>NiceCloth - Fashion Store</title>
+    <link rel="stylesheet" href="nHomeP2.css" />
+  </head>
+  <body>
+    <nav class="navbar" role="navigation">
+      <div class="navbar-container">
+        <h1 class="logo">NiceCloth</h1>
+        <div class="nav-links">
+          <a href="./nHomeP2.html" class="nav-link">Home</a>
+          <a href="./nProfile.html" class="nav-link">Profile</a>
+          <a href="./nCart.html" class="nav-link" aria-label="Shopping Cart">
+            <span>Cart (</span>
+            <span data-el="div-1"></span>
+            <span>)</span>
+          </a>
+          <a href="./nContact.html" class="nav-link">Contact</a>
+          <button class="logout-btn" 
+          onclick="window.location.href='./nLogin.html'"
+          aria-label="Logout">Logout</button>
+        </div>
+      </div>
+    </nav>
+
+    <main role="main">
+      <section class="hero" aria-label="Hero Banner">
+        <img
+          src="./PicNiceCloth/Store5.jpeg"
+          alt="Summer Collection Banner"
+          class="hero-image"
+        />
+        <div class="hero-content">
+          <h2 class="hero-title">Summer Collection 2024</h2>
+          <button class="cta-button">See Now</button>
+        </div>
+      </section>
+
+      <section class="categories" aria-label="Shop Categories">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="categories-grid" data-el="for">
+          <article class="category-card" data-el="div-2">
+            <img src="./PicNiceCloth/Store4.jpg" alt="" class="category-image" />
+            <div class="category-name" data-el="div-3"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="featured-products" aria-label="Featured Products">
+        <div class="featured-container">
+          <h2 class="section-title">Featured Products</h2>
+          <div class="products-grid" data-el="for-2">
+            <article class="product-card" data-el="div-4">
+              <img src="./PicNiceCloth/meo3.jpg" alt="" class="product-image" />
+              <div class="product-details">
+                <h3 class="product-title" data-el="div-5"></h3>
+                <p class="product-price">
+                  <span>$</span>
+                  <span data-el="div-6"></span>
+                </p>
+                <button class="add-to-cart-btn" aria-label="Add to Cart">
+                  Add to Cart
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter" aria-label="Newsletter Subscription">
+        <div class="newsletter-container">
+          <h2 class="newsletter-title">Subscribe for more news</h2>
+          <p class="newsletter-description">
+            Get updates on new arrivals and special offers!
+          </p>
+          <form
+            class="newsletter-form"
+            aria-label="Newsletter subscription form"
+          >
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="email-input"
+              aria-label="Email subscription"
+              required
+            />
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">About Us</h3>
+          <p>Your trusted destination for fashion and style.</p>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Customer Service</h3>
+          <ul class="footer-list">
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#shipping">Shipping Info</a></li>
+            <li><a href="#returns">Returns</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-list">
+            <li><a href="#new">New Arrivals</a></li>
+            <li><a href="#sale">Sale</a></li>
+            <li><a href="#gift-cards">Gift Cards</a></li>
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Connect With Us</h3>
+          <ul class="footer-list">
+            <li><a href="#facebook" aria-label="Facebook">Facebook</a></li>
+            <li><a href="#instagram" aria-label="Instagram">Instagram</a></li>
+            <li><a href="#twitter" aria-label="Twitter">Twitter</a></li>
+            <li><a href="#pinterest" aria-label="Pinterest">Pinterest</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          <span>©</span>
+          <span data-el="div-7"></span>
+          <span>NiceCloth. All rights reserved.</span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="nHomeP2.js"></script>
+  </body>
+</html>

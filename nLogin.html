@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NiceCloth - Login</title>
+    <link rel="stylesheet" href="nLogin.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="brand">NiceCloth</div>
+      <div class="nav-links">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/about">About Us</a>
+        <a class="nav-link" href="/contact">Contact</a>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <div class="login-container">
+        <div class="login-header">
+          <img
+            alt="NiceCloth Logo"
+            src="./picNiceCloth/Pic1.jpeg"
+            class="logo-image"
+          />
+          <h1 class="login-title">NiceCloth</h1>
+          <p class="welcome-text">Welcome Back</p>
+        </div>
+
+        <form id="loginForm" class="login-form">
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input
+              id="email"
+              class="form-input"
+              type="email"
+              required
+              aria-required="true"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input
+              id="password"
+              class="form-input"
+              type="password"
+              required
+              aria-required="true"
+            />
+          </div>
+
+          <div
+            id="errorMessage"
+            class="error-message"
+            role="alert"
+            aria-live="polite"
+          ></div>
+
+          <button type="submit" class="login-button" id="loginButton">
+            <span id="loadingText" class="hidden">Logging in...</span>
+            <span id="buttonText">Log In</span>
+          </button>
+
+          <div class="signup-prompt">
+            <span>Don't have an account?</span>
+            <a href="/nRegister" class="signup-link">Sign up</a>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">© 2025 NiceCloth. All rights reserved.</footer>
+    <script src="nLogin.js"></script>
+  </body>
+</html>
